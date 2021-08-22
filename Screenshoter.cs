@@ -21,7 +21,7 @@ namespace VoxelScreenshoterMod
         private void OnEnable()
         {
             _background = GetComponentInChildren<Image>();
-            _background.color = Color.white;
+            _background.color = Color.red;
 
             var homeRegion = Manager<RegionManager>.Current.HomeRegion;
             var center = homeRegion.Center;
@@ -40,7 +40,7 @@ namespace VoxelScreenshoterMod
             _screenshoterActive = !_screenshoterActive;
             if (_screenshotRoutine != null)
             {
-                _background.color = Color.white;
+                _background.color = Color.red;
                 StopCoroutine(_screenshotRoutine);
                 CameraController.Current.TryRestoreDefaultView();
             }
