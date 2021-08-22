@@ -41,10 +41,7 @@ namespace VoxelScreenshoterMod
             GoTo(_initialPos, _initialDistance);
         }
 
-        public void OnUpdate()
-        {
-            _camera.orthographicSize += Time.deltaTime * 15f;
-        }
+        public void OnUpdate() { }
 
         public void OnLateUpdate() { }
 
@@ -54,7 +51,6 @@ namespace VoxelScreenshoterMod
             _camera.transform.position = new Vector3(target.x, 10, target.z);
             _camera.transform.rotation = Quaternion.Euler(new Vector3(DefaultRotationX, DefaultRotationY, 0.0f));
             _camera.orthographicSize = _currentDistance;
-            //_camera.orthographicSize = 0;
         }
     }
 }

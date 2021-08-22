@@ -11,7 +11,7 @@ namespace VoxelScreenshoterMod
     {
         private bool _screenshoterActive;
         private Coroutine _screenshotRoutine;
-        private float _timeInterval = 5f;
+        private float _timeInterval = 60f;
         private int _width = 4096;
         private int _height = 3072;
         private Image _background;
